@@ -15,7 +15,8 @@ def run(episodes, is_training=True, render=True):
         f.close()
 
     learning_rate_a = 0.9 # alpha or learning rate
-    discount_factor_g = 0.9 # gamma or discount rate. Near 0: more weight/reward placed on immediate state. Near 1: more on future state.
+    discount_factor_g = 0.9 # gamma or discount rate. Near 0: more weight/reward placed on immediate state. 
+    # Near 1: more on future state.
     epsilon = 1         # 1 = 100% random actions
     epsilon_decay_rate = 0.0001        # epsilon decay rate. 1/0.0001 = 10,000
     rng = np.random.default_rng()   # random number generator
@@ -66,4 +67,4 @@ def run(episodes, is_training=True, render=True):
 if __name__ == '__main__':
     # run(15000)
 
-    run(5, is_training=True, render=True)
+    run(1000, is_training=True, render=True)
